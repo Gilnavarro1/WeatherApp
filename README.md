@@ -39,13 +39,33 @@ WeatherApp é um aplicativo desenvolvido em React Native com Expo, que utiliza a
    EXPO_PUBLIC_WEATHER_APP_ID=your_api_key
    ```
 
-4. **Executar o aplicativo**:
+4. **Instalar o plugin `expo-location`** (se necessário):
+   Caso o plugin não esteja instalado automaticamente, utilize o seguinte comando para instalá-lo:
+   ```bash
+   npx expo install expo-location
+   ```
+   Esse plugin é usado para acessar a localização do dispositivo. O app solicitará permissão ao usuário para obter a localização sempre e enquanto o aplicativo estiver em uso, conforme a configuração abaixo:
+   ```json
+   {
+     "plugins": [
+       [
+         "expo-location",
+         {
+           "locationAlwaysAndWhenInUsePermission": "Allow $(PRODUCT_NAME) to use your location."
+         }
+       ],
+       "expo-font"
+     ]
+   }
+   ```
+
+5. **Executar o aplicativo**:
    Inicie o Expo:
    ```bash
    npm start
    ```
 
-5. **Testar o aplicativo em um emulador ou dispositivo físico**:
+6. **Testar o aplicativo em um emulador ou dispositivo físico**:
    Siga as instruções do Expo para rodar no Android ou iOS.
 
 ## Observações
