@@ -58,7 +58,7 @@ export function CityProvider({children}: CityContextProviderProps) {
 
       if (reverseGeocode.length > 0) {
         const res = await getCityByNameService(
-          reverseGeocode[0].city || ""
+          reverseGeocode[0].city || reverseGeocode[0].subregion || ""
         );
         setCity(res[0]);
         if (res.length !== 0) await saveStorageCity(res[0]);
