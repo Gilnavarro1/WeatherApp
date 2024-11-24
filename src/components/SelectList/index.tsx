@@ -1,5 +1,6 @@
 import { Text, TouchableOpacity, View } from 'react-native';
 
+import { ScrollView } from 'react-native';
 import { styles } from './styles';
 import { Input } from '@components/Input';
 import { CityProps } from '@services/getCityByNameService';
@@ -24,7 +25,7 @@ export function SelectList(props: Props) {
         value={props.value}
       />
 
-      <View style={styles.options} testID='options'>
+      <ScrollView style={styles.options} testID='options'>
         {
           props.data.map((item) => (
             <TouchableOpacity
@@ -38,7 +39,7 @@ export function SelectList(props: Props) {
             </TouchableOpacity>
           ))
         }
-      </View>
+      </ScrollView>
     </View>
   );
 }

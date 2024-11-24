@@ -8,6 +8,7 @@ export const styles = StyleSheet.create({
     padding: 20,
     paddingBottom: 0,
     gap: 8,
+    zIndex: 10,
   },
   scroll: {
     flex: 1,
@@ -15,5 +16,6 @@ export const styles = StyleSheet.create({
     gap: 8,
     paddingBottom: 64,
     bottom: 0,
+    zIndex: 1,
   }
 });

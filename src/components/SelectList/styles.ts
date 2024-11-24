@@ -5,15 +5,17 @@ export const styles = StyleSheet.create({
   container: {
     width: '100%',
     position: 'relative',
-    zIndex: 1,
+    zIndex: 10,
   },
   options: {
-    overflow: 'hidden',
+    maxHeight: 200,
+    overflow: 'scroll',
     position: 'absolute',
-    borderRadius: 8,
     top: 64,
     left: 0,
     right: 0,
+    borderRadius: 8,
+    zIndex: 10,
   },
   title: {
     fontSize: 16,
